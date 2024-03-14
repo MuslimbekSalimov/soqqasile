@@ -1,9 +1,15 @@
 import "./Select.scss"
+import "aos/dist/aos.css"
+import React, { useEffect } from "react";
+import Aos from "aos";
 
 function Select() {
+    useEffect(() => {
+        Aos.init({duration:2000});
+    }, [])
     return (
         <>
-        <section className="select">
+        <section className="select" data-aos="zoom-in">
             <div className="container">
                 <div className="select__info">
                     <h2 className="select__heading">Select project,</h2>

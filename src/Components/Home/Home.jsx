@@ -2,7 +2,8 @@ import "./Home.scss"
 import Hero from "../Hero/Hero";
 // import Header from "../Header/Header";
 import Select from "../Select/Select";
-import  Dev from "../Dev/Dev"
+import  Dev from "../Dev/Dev";
+import Remont from "../Remont/Remont";
 
 function Home() {
     return (
@@ -11,6 +12,7 @@ function Home() {
             <Hero/>
             <Select/>
             <Dev/>
+            <Remont/>
         </div>
     )
 }

@@ -1,17 +1,23 @@
 import "./Hero.scss"
+import "aos/dist/aos.css"
+import React, { useEffect } from "react";
+import Aos from "aos";
 import GitLAb from "../img/GitLab.png";
 import GitHub from "../img/GitHub.png";
 import Blue from "../img/Blue.png";
 import Material from "../img/Material.png";
 
 function Hero() {
+    useEffect(() => {
+        Aos.init({duration:200});
+    }, [])
     return (
         <>
 
         <section className="hero">
             <div className="container">
                 <div className="hero__info">
-                    <div className="hero__info--div">
+                    <div className="hero__info--div" data-aos="fade-right">
                         <h1 className="hero__heading">Always <br/> Ready to Code.</h1>
                         <p className="hero__text">Spin up fresh, automated dev environments <br/> for each task, in the cloud, in seconds.</p>
 
@@ -36,7 +42,7 @@ function Hero() {
                         </div>
                     </div>
 
-                    <picture>
+                    <picture data-aos="fade-left">
                         <img src={Material} alt="Material" width={700} height={672}/>
                     </picture>
                 </div>
